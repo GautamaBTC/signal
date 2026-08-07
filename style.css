@@ -1,19 +1,20 @@
 /* ═══════════════════════════════════════════════════════════════════
    SIGNAL — Personal Link System
-   style.css v1.0
+   style.css v1.0 (Green Matrix Update)
    ═══════════════════════════════════════════════════════════════════ */
 
 /* ─── Variables ─────────────────────────────────────────────────────── */
 :root {
-  --green:       #39FF14;
-  --green-dim:   rgba(57, 255, 20, 0.15);
-  --green-border: rgba(57, 255, 20, 0.25);
+  --primary:       #39FF14;       /* Ядовито-зелёный */
+  --primary-dim:   rgba(57, 255, 20, 0.15);
+  --primary-border: rgba(57, 255, 20, 0.25);
+  
   --white:       #FFFFFF;
   --gray:        #8A94A8;
-  --bg:          #050505;
+  --bg:          #050505;         /* Глубокий чёрный */
   --glass-bg:    rgba(5, 5, 5, 0.32);
   --glass-bg2:   rgba(5, 5, 5, 0.40);
-  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(57, 255, 20, 0.1); /* Зеленоватая рамка */
 
   --font-mono: 'SF Mono', 'Fira Code', 'Courier New', monospace;
   --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
@@ -23,8 +24,14 @@
   --safe-left:   env(safe-area-inset-left, 0px);
   --safe-right:  env(safe-area-inset-right, 0px);
 
-  --glow-green:  0 0 8px rgba(57, 255, 20, 0.6), 0 0 20px rgba(57, 255, 20, 0.2);
+  --glow-primary:  0 0 10px rgba(57, 255, 20, 0.6), 0 0 20px rgba(57, 255, 20, 0.3);
   --glow-white:  0 0 6px rgba(255, 255, 255, 0.4);
+  
+  /* Для совместимости со старыми названиями */
+  --green: var(--primary);
+  --green-dim: var(--primary-dim);
+  --cyan: var(--primary); 
+  --purple: var(--gray);
 }
 
 /* ─── Reset ──────────────────────────────────────────────────────────── */
