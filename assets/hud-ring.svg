@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <filter id="glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur1"/>
+      <feGaussianBlur stdDeviation="6" result="blur2"/>
+      <feMerge><feMergeNode in="blur2"/><feMergeNode in="blur1"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.15"/>
+      <stop offset="60%" stop-color="#00E5FF" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#00E5FF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0.6"/>
+    </linearGradient>
+    <clipPath id="ringClip">
+      <circle cx="200" cy="200" r="175"/>
+    </clipPath>
+  </defs>
+
+  <!-- Center ambient glow -->
+  <circle cx="200" cy="200" r="175" fill="url(#centerGlow)"/>
+
+  <!-- Outer ring -->
+  <circle cx="200" cy="200" r="175" fill="none" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.5" filter="url(#glow-soft)"/>
+
+  <!-- Outer ring dashes -->
+  <circle cx="200" cy="200" r="175" fill="none" stroke="#00E5FF" stroke-width="2" stroke-opacity="0.8"
+    stroke-dasharray="4 8" filter="url(#glow-cyan)">
+    <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="40s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Tick marks outer -->
+  <g stroke="#00E5FF" stroke-width="1" stroke-opacity="0.6" filter="url(#glow-soft)">
+    <!-- 72 ticks, every 5 degrees -->
+    <line x1="200" y1="25" x2="200" y2="38" transform="rotate(0 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(5 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(10 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(15 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(20 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="38" transform="rotate(30 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(35 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(40 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(45 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(50 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="38" transform="rotate(60 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(65 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(70 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(75 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(80 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="38" transform="rotate(90 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(95 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(100 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(105 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(110 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="38" transform="rotate(120 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(125 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(130 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(135 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(140 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="38" transform="rotate(150 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(155 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(160 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(165 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(170 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="38" transform="rotate(180 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(185 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(190 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(195 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(200 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="38" transform="rotate(210 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(215 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(220 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(225 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(230 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="38" transform="rotate(240 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(245 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(250 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(255 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(260 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="38" transform="rotate(270 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(275 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(280 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(285 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(290 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="38" transform="rotate(300 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(305 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(310 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(315 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(320 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="38" transform="rotate(330 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(335 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(340 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(345 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="33" transform="rotate(350 200 200)"/>
+    <line x1="200" y1="25" x2="200" y2="38" transform="rotate(355 200 200)"/>
+  </g>
+
+  <!-- Scanning sector -->
+  <g clip-path="url(#ringClip)">
+    <path d="M200,200 L200,30 A170,170 0 0,1 340,290 Z" fill="url(#scanGradient)" opacity="0.4">
+      <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="6s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Middle ring -->
+  <circle cx="200" cy="200" r="140" fill="none" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.3"/>
+
+  <!-- Inner ring -->
+  <circle cx="200" cy="200" r="105" fill="none" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.4" filter="url(#glow-soft)"/>
+
+  <!-- Inner ring dashes - counter rotate -->
+  <circle cx="200" cy="200" r="105" fill="none" stroke="#8B5CFF" stroke-width="1.5" stroke-opacity="0.6"
+    stroke-dasharray="12 24">
+    <animateTransform attributeName="transform" type="rotate" from="360 200 200" to="0 200 200" dur="25s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Crosshair lines -->
+  <line x1="200" y1="30" x2="200" y2="95" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.5" filter="url(#glow-soft)"/>
+  <line x1="200" y1="305" x2="200" y2="370" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.5" filter="url(#glow-soft)"/>
+  <line x1="30" y1="200" x2="95" y2="200" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.5" filter="url(#glow-soft)"/>
+  <line x1="305" y1="200" x2="370" y2="200" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.5" filter="url(#glow-soft)"/>
+
+  <!-- Diagonal guides -->
+  <line x1="75" y1="75" x2="110" y2="110" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.3"/>
+  <line x1="325" y1="75" x2="290" y2="110" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.3"/>
+  <line x1="75" y1="325" x2="110" y2="290" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.3"/>
+  <line x1="325" y1="325" x2="290" y2="290" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.3"/>
+
+  <!-- Data dots on outer ring -->
+  <circle cx="200" cy="27" r="3" fill="#00E5FF" filter="url(#glow-cyan)">
+    <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="40s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="200" cy="27" r="3" fill="#8B5CFF" filter="url(#glow-cyan)">
+    <animateTransform attributeName="transform" type="rotate" from="120 200 200" to="480 200 200" dur="40s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="200" cy="27" r="2" fill="#FFFFFF" opacity="0.8">
+    <animateTransform attributeName="transform" type="rotate" from="240 200 200" to="600 200 200" dur="40s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Center core -->
+  <circle cx="200" cy="200" r="8" fill="none" stroke="#00E5FF" stroke-width="1.5" filter="url(#glow-cyan)">
+    <animate attributeName="r" values="8;10;8" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="200" cy="200" r="3" fill="#00E5FF" filter="url(#glow-cyan)">
+    <animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

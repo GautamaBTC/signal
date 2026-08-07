@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 90" width="340" height="90">
+  <defs>
+    <filter id="tl-glow-cyan" x="-30%" y="-50%" width="160%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="tl-glow-purple" x="-30%" y="-50%" width="160%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="passedGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0.15"/>
+    </linearGradient>
+    <linearGradient id="futureGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CFF" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#020612" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- This SVG is decorative; actual timeline rendered in JS -->
+  <!-- Base line -->
+  <line x1="10" y1="45" x2="330" y2="45" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.2"/>
+
+  <!-- Start marker -->
+  <circle cx="10" cy="45" r="3" fill="#00E5FF" opacity="0.6" filter="url(#tl-glow-cyan)"/>
+  <!-- End marker -->
+  <circle cx="330" cy="45" r="3" fill="#8B5CFF" opacity="0.6" filter="url(#tl-glow-purple)"/>
+
+  <!-- Example month blocks (decorative) -->
+  <!-- Passed: JAN -->
+  <rect x="14" y="30" width="34" height="30" rx="3" fill="url(#passedGrad)" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.5"/>
+
+  <!-- Passed: FEB -->
+  <rect x="52" y="30" width="34" height="30" rx="3" fill="url(#passedGrad)" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.5"/>
+
+  <!-- Passed: MAR -->
+  <rect x="90" y="30" width="34" height="30" rx="3" fill="url(#passedGrad)" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.5"/>
+
+  <!-- Active: APR (example) -->
+  <rect x="128" y="28" width="34" height="34" rx="3" fill="none" stroke="#FFFFFF" stroke-width="1"/>
+  <rect x="128" y="28" width="34" height="34" rx="3" fill="#00E5FF" fill-opacity="0.08">
+    <animate attributeName="fill-opacity" values="0.08;0.18;0.08" dur="2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Future blocks -->
+  <rect x="166" y="30" width="34" height="30" rx="3" fill="url(#futureGrad)" stroke="#8B5CFF" stroke-width="0.5" stroke-opacity="0.4"/>
+  <rect x="204" y="30" width="34" height="30" rx="3" fill="url(#futureGrad)" stroke="#8B5CFF" stroke-width="0.5" stroke-opacity="0.4"/>
+  <rect x="242" y="30" width="34" height="30" rx="3" fill="url(#futureGrad)" stroke="#8B5CFF" stroke-width="0.5" stroke-opacity="0.4"/>
+  <rect x="280" y="30" width="34" height="30" rx="3" fill="url(#futureGrad)" stroke="#8B5CFF" stroke-width="0.5" stroke-opacity="0.4"/>
+
+  <!-- Labels -->
+  <text x="31" y="48" font-family="'Courier New', monospace" font-size="8" fill="#00E5FF" opacity="0.9" text-anchor="middle">JAN</text>
+  <text x="69" y="48" font-family="'Courier New', monospace" font-size="8" fill="#00E5FF" opacity="0.9" text-anchor="middle">FEB</text>
+  <text x="107" y="48" font-family="'Courier New', monospace" font-size="8" fill="#00E5FF" opacity="0.9" text-anchor="middle">MAR</text>
+  <text x="145" y="48" font-family="'Courier New', monospace" font-size="8" fill="#FFFFFF" opacity="1" text-anchor="middle">APR</text>
+  <text x="183" y="48" font-family="'Courier New', monospace" font-size="8" fill="#8B5CFF" opacity="0.6" text-anchor="middle">MAY</text>
+  <text x="221" y="48" font-family="'Courier New', monospace" font-size="8" fill="#8B5CFF" opacity="0.6" text-anchor="middle">JUN</text>
+  <text x="259" y="48" font-family="'Courier New', monospace" font-size="8" fill="#8B5CFF" opacity="0.6" text-anchor="middle">JUL</text>
+  <text x="297" y="48" font-family="'Courier New', monospace" font-size="8" fill="#8B5CFF" opacity="0.6" text-anchor="middle">AUG</text>
+</svg>

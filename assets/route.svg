@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <filter id="route-glow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="routeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#00E5FF" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#8B5CFF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#8B5CFF" stop-opacity="0.9"/>
+    </linearGradient>
+    <marker id="arrowRight" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 Z" fill="#8B5CFF" opacity="0.8"/>
+    </marker>
+  </defs>
+
+  <!-- Origin point -->
+  <circle cx="18" cy="40" r="5" fill="none" stroke="#00E5FF" stroke-width="1.5" filter="url(#route-glow)"/>
+  <circle cx="18" cy="40" r="2" fill="#00E5FF" filter="url(#route-glow)">
+    <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Origin pulse rings -->
+  <circle cx="18" cy="40" r="8" fill="none" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.5">
+    <animate attributeName="r" values="5;14;5" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-opacity" values="0.6;0;0.6" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Route line -->
+  <line x1="28" y1="40" x2="292" y2="40" stroke="url(#routeGrad)" stroke-width="1.5" filter="url(#route-glow)"/>
+
+  <!-- Route segments / dashes overlay -->
+  <line x1="28" y1="40" x2="292" y2="40" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.3"
+    stroke-dasharray="6 4">
+    <animate attributeName="stroke-dashoffset" values="0;-40" dur="3s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Midpoint marker -->
+  <circle cx="160" cy="40" r="2" fill="#FFFFFF" opacity="0.5"/>
+  <line x1="160" y1="34" x2="160" y2="28" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="155" y="24" font-family="'Courier New', monospace" font-size="7" fill="#FFFFFF" opacity="0.4" text-anchor="middle">1990 KM</text>
+
+  <!-- Quarter markers -->
+  <line x1="90" y1="36" x2="90" y2="44" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.3"/>
+  <line x1="230" y1="36" x2="230" y2="44" stroke="#8B5CFF" stroke-width="0.5" stroke-opacity="0.3"/>
+
+  <!-- Target point -->
+  <circle cx="302" cy="40" r="5" fill="none" stroke="#8B5CFF" stroke-width="1.5" filter="url(#route-glow)"/>
+  <circle cx="302" cy="40" r="2" fill="#8B5CFF" filter="url(#route-glow)">
+    <animate attributeName="opacity" values="1;0.4;1" dur="1.8s" repeatCount="indefinite" begin="0.5s"/>
+  </circle>
+
+  <!-- Target pulse -->
+  <circle cx="302" cy="40" r="8" fill="none" stroke="#8B5CFF" stroke-width="0.5" stroke-opacity="0.5">
+    <animate attributeName="r" values="5;14;5" dur="2.2s" repeatCount="indefinite" begin="0.5s"/>
+    <animate attributeName="stroke-opacity" values="0.6;0;0.6" dur="2.2s" repeatCount="indefinite" begin="0.5s"/>
+  </circle>
+
+  <!-- Labels -->
+  <text x="18" y="58" font-family="'Courier New', monospace" font-size="8" fill="#00E5FF" opacity="0.8" text-anchor="middle" filter="url(#route-glow)">ШАХТЫ</text>
+  <text x="302" y="58" font-family="'Courier New', monospace" font-size="8" fill="#8B5CFF" opacity="0.8" text-anchor="middle" filter="url(#route-glow)">СОРТАВАЛА</text>
+
+  <!-- Coord labels -->
+  <text x="18" y="68" font-family="'Courier New', monospace" font-size="6" fill="#00E5FF" opacity="0.4" text-anchor="middle">47.68°N</text>
+  <text x="302" y="68" font-family="'Courier New', monospace" font-size="6" fill="#8B5CFF" opacity="0.4" text-anchor="middle">61.71°N</text>
+
+  <!-- ОТПРАВНАЯ ТОЧКА / ЦЕЛЬ labels -->
+  <text x="18" y="14" font-family="'Courier New', monospace" font-size="6" fill="#8A94A8" text-anchor="middle" letter-spacing="1">ОТПРАВНАЯ ТОЧКА</text>
+  <text x="302" y="14" font-family="'Courier New', monospace" font-size="6" fill="#8A94A8" text-anchor="middle" letter-spacing="1">ЦЕЛЬ</text>
+</svg>
